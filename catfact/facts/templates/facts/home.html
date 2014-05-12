@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+  {% load staticfiles %}
+    <title>CatFacts!</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'catfacts/css/style.css' %}">
+    
+    <script src="{% static 'catfacts/js/skel.min.js' %}">
+    {
+      prefix: "/static/catfacts/css/style",
+      resetCSS: true,
+      boxModel: "border",
+      grid: { gutters: 30 },
+      breakpoints: {
+        wide: { range: "1200-", containers: 1140, grid: { gutters: 50 } },
+        narrow: { range: "481-1199", containers: 960 },
+        mobile: { range: "-480", containers: "fluid", lockViewport: true, grid: { collapse: true } }
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+
+      <!-- Hero -->
+        <section id="hero">
+          <h1>Cat Facts</h1>
+          <h2>Facts about cats<dot>.</dot></h2>
+          <a href="#" class="button">Get Started</a>
+        </section>
+      <!-- Features -->
+        <div class="row">
+          <section class="4u">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet sed magna etiam adipiscing elit.
+            adipiscing elit nec fringilla urna tempor in. Cras et sodales
+            consectetur viverra lorem ipsum.</p>
+          </section>
+          <section class="4u">
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet sed magna etiam adipiscing elit.
+            adipiscing elit nec fringilla urna tempor in. Cras et sodales
+            consectetur viverra lorem ipsum.</p>
+          </section>
+          <section class="4u">
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet sed magna etiam adipiscing elit.
+            adipiscing elit nec fringilla urna tempor in. Cras et sodales
+            consectetur viverra lorem ipsum.</p>
+          </section>
+        </div>
+      <!-- Main -->
+        <div class="row">
+          <!-- Content -->
+            <section class="8u">
+              <h2>Heading</h2>
+              <p>Lorem ipsum dolor sit amet sed magna etiam adipiscing elit.
+              adipiscing elit nec fringilla urna tempor in. Cras et sodales
+              consectetur viverra lorem ipsum. Lorem ipsum dolor sit amet
+              sed magna etiam adipiscing elit adipiscing elit nec fringilla
+              urna tempor in. Cras et sodales consectetur viverra.</p>
+            </section>
+          <!-- Sidebar -->
+            <section class="4u">
+              <h2>Heading</h2>
+              <p>Lorem ipsum dolor sit amet sed magna etiam adipiscing elit.
+              adipiscing elit nec fringilla urna tempor in. Cras et sodales
+              consectetur viverra lorem ipsum.</p>
+            </section>
+        </div>
+      <!-- Footer -->
+        <div id="footer">
+          © Example. All rights reserved.
+        </div>
+    </div>
+  </body>
+</html>
