@@ -45,6 +45,7 @@ THIRD_PARTY_APPS = (
 CUSTOM_APPS = (
     'cats',
     'facts',
+    'south',
 )
 
 
@@ -100,3 +101,6 @@ STATIC_ROOT = '/home/webadmin/catfacts/catfact/static/'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# Cat profile object
+AUTH_PROFILE_MODULE = "cats.Cat"

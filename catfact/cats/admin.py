@@ -1,5 +1,5 @@
 from django.contrib import admin
-from facts.models import Fact 
+from cats.models import Cat 
 admin.autodiscover()
 
-admin.site.register(Fact)
+admin.site.register(Cat)
