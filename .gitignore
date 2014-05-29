@@ -4,10 +4,8 @@ static/admin
 static/admin/
 
 # Web junk
-/js/
-/css/
-/img/
-
+/static/admin/
+/static/admin/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
