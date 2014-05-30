@@ -56,7 +56,7 @@ class Cat(models.Model):
     email 		= models.CharField(max_length=30, blank=True, null=True)
 
     # All facts received. 
-    received	= ListField(blank=True, null=True, verbose_name="Facts Received")
+    received	= ListField(blank=True, verbose_name="Facts Received")
     def __unicode__(self):
         return str(self.pk) + " " + str(self.firstName )+ " " + str(self.lastName)
 
