@@ -1,7 +1,9 @@
+import ast
 from django.db import models
 from django.contrib.auth.models import User
 from south.modelsinspector import add_introspection_rules
 from django.core.validators import RegexValidator
+
 
 # Fix South's meowing about introspection rules. Will treat ListField like a TextField, which is a-ok
 add_introspection_rules([], ["^cats\.models\.ListField"])
@@ -45,16 +47,18 @@ class ListField(models.TextField):
 # Cats (user profile)
 class Cat(models.Model):
 	# Link to Django User model
-	user 		= models.ForeignKey(User, unique=True)
-	
-	# User information. No need to require anything
-	firstName 	= models.CharField(max_length=15, blank=True, null=True, verbose_name="First Name")
-	lastName 	= models.CharField(max_length=15, blank=True, null=True, verbose_name="Last Name")
-	phone 		= models.CharField(max_length=10, blank=True, null=True, validators=[telephone])
-	email 		= models.CharField(max_length=30, blank=True, null=True)
-	
-	# All facts received. 
-	received	= ListField(blank=True, null=True, verbose_name="Facts Received")
+    user 		= models.ForeignKey(User, unique=True)
+
+    # User information. No need to require anything
+    firstName 	= models.CharField(max_length=15, blank=True, null=True, verbose_name="First Name")
+    lastName 	= models.CharField(max_length=15, blank=True, null=True, verbose_name="Last Name")
+    phone 		= models.CharField(max_length=10, blank=True, null=True, validators=[telephone])
+    email 		= models.CharField(max_length=30, blank=True, null=True)
+
+    # All facts received. 
+    received	= ListField(blank=True, null=True, verbose_name="Facts Received")
+    def __unicode__(self):
+        return str(self.pk) + " " + str(self.firstName )+ " " + str(self.lastName)
 
 # Litterbox. The address of a cat.
 class Litterbox(models.Model):
